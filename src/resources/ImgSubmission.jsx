@@ -2,9 +2,8 @@ import { useState } from "react";
 import style from "./Submission.module.css";
 
 // Define constants for the API key and endpoint from environment variables
-const API_KEY = "9d5002abe48d41e6b9fa13ffc077f8b2";
-const ENDPOINT =
-  "https://missionbas01-prediction.cognitiveservices.azure.com/customvision/v3.0/Prediction/e4a9a28c-802f-44b1-a7ee-64e009311073/classify/iterations/Iteration6/image";
+const API_KEY = import.meta.env.VITE_VISION_PREDICTION_KEY;
+const ENDPOINT = import.meta.env.VITE_VISION_PREDICTION_ENDPOINT;
 
 export default function GetQuote() {
   const [selectedFile, setSelectedFile] = useState(null); // State to store the selected file and its preview URL
